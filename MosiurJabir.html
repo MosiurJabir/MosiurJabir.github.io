@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content=""width=device-width, initial-scale=1">
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+ul {
+      padding: 10px;
+      background: lightblue;
+      text-align: center;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+    <ul>
+     
+      <li><button onclick=appetizers()>appetizers</button></li>
+      <li><button onclick=entrees()>entrees</button></li>
+      <li><button onclick=desserts()>desserts</button></li>
+    </ul>
+
+<body>
+<h1>esha's restaurant</h1>
+<h2>a New York City eatery</h2>
+
+<div id="hi"></div>
+
+<script>
+  appetizersImages = [
+    'url("https://www.familyfreshmeals.com/wp-content/uploads/2018/11/Easy-Creamy-Prosciutto-Cracker-Appetizer-Easy-appetizer-Family-Fresh-Meals.jpg")',
+    'url("https://www.ladybehindthecurtain.com/wp-content/uploads/2016/03/Strawberry-Shortcake-Appetizer-8.jpg")',
+    'url("https://jeanetteshealthyliving.com/wp-content/uploads/2015/05/Salmon-Tartare-Cucumber-Appetizer-4.jpg")',
+  ]
+  entreesImages = [ 
+    'url("http://www.mrsdash.com/sites/default/files/entree-cold.jpg")',
+    'url("http://www.mrsdash.com/sites/default/files/entree-hot.jpg")',
+    'url("http://thekosherkitchen.com/images/product3-zoomed.jpg")',
+    ]
+  dessertsImages = [
+    'url("https://images-gmi-pmc.edge-generalmills.com/c2462c96-4a12-484b-ad78-4bbc2ce6505f.jpg")',
+    'url("https://images-gmi-pmc.edge-generalmills.com/817d708a-33e6-46f7-b985-0360b6c55cf4.jpg")',
+    'url("https://crackerbarrel.com/-/media/CrackerBarrel/Menu/Desserts/Coca_Cola_Cake_780x390.jpg?h=390&w=780&la=en&hash=A6DEC82403976C889CBACBB769A29C4F926E1C20")',
+    ]
+  
+  appetizersDivs = [
+'<div class="item" onclick=this.classList.toggle("show-description")><p>welsh onion soko <span class="price">$14</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil. </small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>pastrami boudin tongue <span class="price">$22</span><br /><small>Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small></p></div>',
+  
+'<div class="item" onclick=this.classList.toggle("show-description")><p>fruitcake marzipan pudding dragee <span class="price">$8</span><br /><small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.</small></p></div>',
+]
+  entreesDivs = [
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Healthy medium rare steak <span class="price">$24</span><br /><small>Waygu beef cooked to medium with a secret seasoning and with a special sauce. </small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Kobe beef steak cooked well done <span class="price">$22</span><br /><small> salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small></p></div>',
+  
+'<div class="item" onclick=this.classList.toggle("show-description")><p>steak with onion rings and gravy <span class="price">$45</span><br /><small>.Perfectly cooked steak cooked with a special seasoning and with amazing gravy and cripsy onion rings .</small></p></div>',
+]
+  dessertsDivs = [
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Lava cake <span class="price">$24</span><br /><small>Waygu beef cooked to medium with a secret seasoning and with a special sauce. </small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>choclate brownie with whipped cream <span class="price">$12</span><br /><small>amazing choclate brownie with whipped cream and tasty choclate fudge on top that will make you want more.</small></p></div>',
+  
+'<div class="item" onclick=this.classList.toggle("show-description")><p>choclate brownie with any choice of icecream <span class="price">$45</span><br /><small>.our freshly made choclate brownie that will melt in you mouth and comes with ur favorite flavor of icecream, one of the best comfort foods .</small></p></div>',
+]
+  
+  
+  function appetizers() {
+    bored = document.getElementById("hi")
+    bored.innerHTML = ''
+    bored.innerHTML += appetizersDivs[0]
+    bored.innerHTML += appetizersDivs[1]
+    bored.innerHTML += appetizersDivs[2]
+    
+    //alert("hello")
+    items = document.getElementsByClassName("item")
+    items[0].style.background = appetizersImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = appetizersImages[1]
+    items[2].style.background = appetizersImages[2]
+  }
+  function entrees() {
+    why = document.getElementById("hi")
+    why.innerHTML = ''
+    why.innerHTML += entreesDivs[0]
+    why.innerHTML += entreesDivs[1]
+    why.innerHTML += entreesDivs[2]
+    
+    //alert("hello")
+    items = document.getElementsByClassName("item")
+    items[0].style.background = entreesImages[0]
+    items[1].style.background = entreesImages[1]
+    items[2].style.background = entreesImages[2]
+  }
+  function desserts() {
+    run = document.getElementById("hi")
+    run.innerHTML = ''
+    run.innerHTML += dessertsDivs[0]
+    run.innerHTML += dessertsDivs[1]
+    run.innerHTML += dessertsDivs[2]
+    
+    //alert("hello")
+    items = document.getElementsByClassName("item")
+    items[0].style.background = dessertsImages[0]
+    items[1].style.background = dessertsImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = dessertsImages[2]
+    
+    
+  }
+</script>
+
+</body>
