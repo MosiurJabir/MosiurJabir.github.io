@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <head>
-<meta name="viewport" content=""width=device-width, initial-scale=1">
+
 <script src="/assets/jquery.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
 <style>
@@ -13,7 +14,6 @@ ul {
       display: inline;
       padding: 0px 10px 0px 10px;
     }
-
 body {
   font-family: helvetica, sans-serif;
   margin: 0 auto;
@@ -56,19 +56,15 @@ p {
   -webkit-transition: height .5s;
   -moz-transition: height .5s;
 }
-
 small {
   opacity: 0;
 }
-
 .show-description p {
   height: 150px;
 }
-
 .show-description small {
   opacity: 1;
 }
-
 .price {
   float: right;
 }
@@ -93,23 +89,19 @@ small {
     font-size: 16px;
   }
 }
-
 </style>
-
 </head>
     <ul>
      
       <li><button onclick=appetizers()>appetizers</button></li>
       <li><button onclick=entrees()>entrees</button></li>
       <li><button onclick=desserts()>desserts</button></li>
+		  <li><button onclick=drinks()>drinks</button></li>
     </ul>
-
 <body>
-<h1>esha's restaurant</h1>
+<h1>Mo's restaurant</h1>
 <h2>a New York City eatery</h2>
-
 <div id="hi"></div>
-
 <script>
   appetizersImages = [
     'url("https://www.familyfreshmeals.com/wp-content/uploads/2018/11/Easy-Creamy-Prosciutto-Cracker-Appetizer-Easy-appetizer-Family-Fresh-Meals.jpg")',
@@ -120,34 +112,39 @@ small {
     'url("http://www.mrsdash.com/sites/default/files/entree-cold.jpg")',
     'url("http://www.mrsdash.com/sites/default/files/entree-hot.jpg")',
     'url("http://thekosherkitchen.com/images/product3-zoomed.jpg")',
-    ]
+  ]
   dessertsImages = [
     'url("https://images-gmi-pmc.edge-generalmills.com/c2462c96-4a12-484b-ad78-4bbc2ce6505f.jpg")',
     'url("https://images-gmi-pmc.edge-generalmills.com/817d708a-33e6-46f7-b985-0360b6c55cf4.jpg")',
     'url("https://crackerbarrel.com/-/media/CrackerBarrel/Menu/Desserts/Coca_Cola_Cake_780x390.jpg?h=390&w=780&la=en&hash=A6DEC82403976C889CBACBB769A29C4F926E1C20")',
-    ]
+  ]
+  drinksImages = [
+    'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu6uT6xtWOGBaT-pxOo2NWTWx0K4bum7PZLmc9SzaTOrsxAwE6cA")',
+	
   
   appetizersDivs = [
 '<div class="item" onclick=this.classList.toggle("show-description")><p>welsh onion soko <span class="price">$14</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil. </small></p></div>',
-
 '<div class="item" onclick=this.classList.toggle("show-description")><p>pastrami boudin tongue <span class="price">$22</span><br /><small>Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small></p></div>',
   
 '<div class="item" onclick=this.classList.toggle("show-description")><p>fruitcake marzipan pudding dragee <span class="price">$8</span><br /><small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.</small></p></div>',
 ]
   entreesDivs = [
 '<div class="item" onclick=this.classList.toggle("show-description")><p>Healthy medium rare steak <span class="price">$24</span><br /><small>Waygu beef cooked to medium with a secret seasoning and with a special sauce. </small></p></div>',
-
 '<div class="item" onclick=this.classList.toggle("show-description")><p>Kobe beef steak cooked well done <span class="price">$22</span><br /><small> salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small></p></div>',
   
 '<div class="item" onclick=this.classList.toggle("show-description")><p>steak with onion rings and gravy <span class="price">$45</span><br /><small>.Perfectly cooked steak cooked with a special seasoning and with amazing gravy and cripsy onion rings .</small></p></div>',
 ]
   dessertsDivs = [
 '<div class="item" onclick=this.classList.toggle("show-description")><p>Lava cake <span class="price">$24</span><br /><small>Waygu beef cooked to medium with a secret seasoning and with a special sauce. </small></p></div>',
-
 '<div class="item" onclick=this.classList.toggle("show-description")><p>choclate brownie with whipped cream <span class="price">$12</span><br /><small>amazing choclate brownie with whipped cream and tasty choclate fudge on top that will make you want more.</small></p></div>',
   
 '<div class="item" onclick=this.classList.toggle("show-description")><p>choclate brownie with any choice of icecream <span class="price">$45</span><br /><small>.our freshly made choclate brownie that will melt in you mouth and comes with ur favorite flavor of icecream, one of the best comfort foods .</small></p></div>',
 ]
+  drinksDivs = [
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Thai iced tea <span class="price">$24</span><br /><small>Waygu beef cooked to medium with a secret seasoning and with a special sauce. </small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Bubble tea any flavor <span class="price">$12</span><br /><small>amazing choclate brownie with whipped cream and tasty choclate fudge on top that will make you want more.</small></p></div>',
+]
+ 
   
   
   function appetizers() {
@@ -193,6 +190,20 @@ small {
     
     
   }
+	function drinks() {
+		idk = document.getElementById("hi")
+		idk.innerHTML = ''
+    idk.innerHTML += drinksDivs[0]
+    idk.innerHTML += drinksDivs[1]
+    
+    
+		
+		//alert("hello")
+    items = document.getElementsByClassName("item")
+    items[0].style.background = drinksImages[0]
+    items[1].style.background = drinksImages[1]
+    
+		
+	}
 </script>
-
 </body>
