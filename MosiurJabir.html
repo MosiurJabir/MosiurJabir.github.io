@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <head>
 
@@ -107,11 +106,14 @@ small {
     'url("https://www.familyfreshmeals.com/wp-content/uploads/2018/11/Easy-Creamy-Prosciutto-Cracker-Appetizer-Easy-appetizer-Family-Fresh-Meals.jpg")',
     'url("https://www.ladybehindthecurtain.com/wp-content/uploads/2016/03/Strawberry-Shortcake-Appetizer-8.jpg")',
     'url("https://www.196flavors.com/wp-content/uploads/2017/06/thai-iced-tea-4.jpg")',
+    'url("https://images-gmi-pmc.edge-generalmills.com/1f3f2434-7842-4811-be10-2b01296862e2.jpg")',
   ]
   entreesImages = [ 
     'url("http://www.mrsdash.com/sites/default/files/entree-cold.jpg")',
     'url("http://www.mrsdash.com/sites/default/files/entree-hot.jpg")',
     'url("http://thekosherkitchen.com/images/product3-zoomed.jpg")',
+    'url("https://logansinthecarolinas.com/images/gallery/RibsPork/fullribsentree_pop.jpg")',
+    'url("https://i2.wp.com/koreanaboston.com/wp-content/uploads/2015/04/Haemul-jungol.jpg?resize=600%2C600&ssl=1")',
   ]
   dessertsImages = [
     'url("https://images-gmi-pmc.edge-generalmills.com/c2462c96-4a12-484b-ad78-4bbc2ce6505f.jpg")',
@@ -130,12 +132,15 @@ small {
 '<div class="item" onclick=this.classList.toggle("show-description")><p>pastrami boudin tongue <span class="price">$22</span><br /><small>Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small></p></div>',
   
 '<div class="item" onclick=this.classList.toggle("show-description")><p>fruitcake marzipan pudding dragee <span class="price">$8</span><br /><small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>shrimp puff pastry <span class="price">$12</span><br /><small>amazing choclate brownie with whipped cream and tasty choclate fudge on top that will make you want more.</small></p></div>',
 ]
   entreesDivs = [
 '<div class="item" onclick=this.classList.toggle("show-description")><p>Healthy medium rare steak <span class="price">$24</span><br /><small>Waygu beef cooked to medium with a secret seasoning and with a special sauce. </small></p></div>',
 '<div class="item" onclick=this.classList.toggle("show-description")><p>Kobe beef steak cooked well done <span class="price">$22</span><br /><small> salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small></p></div>',
   
 '<div class="item" onclick=this.classList.toggle("show-description")><p>steak with onion rings and gravy <span class="price">$45</span><br /><small>.Perfectly cooked steak cooked with a special seasoning and with amazing gravy and cripsy onion rings .</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>ribs and pork <span class="price">$32</span><br /><small>amazing choclate brownie with whipped cream and tasty choclate fudge on top that will make you want more.</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>korean hot pot <span class="price">$52</span><br /><small>amazing choclate brownie with whipped cream and tasty choclate fudge on top that will make you want more.</small></p></div>',
 ]
   dessertsDivs = [
 '<div class="item" onclick=this.classList.toggle("show-description")><p>Lava cake <span class="price">$24</span><br /><small>Waygu beef cooked to medium with a secret seasoning and with a special sauce. </small></p></div>',
@@ -156,6 +161,7 @@ small {
     bored.innerHTML += appetizersDivs[0]
     bored.innerHTML += appetizersDivs[1]
     bored.innerHTML += appetizersDivs[2]
+    bored.innerHTML += appetizersDivs[3]
     
     //alert("hello")
     items = document.getElementsByClassName("item")
@@ -163,6 +169,7 @@ small {
     items[0].style.backgroundSize = '100% 100%'
     items[1].style.background = appetizersImages[1]
     items[2].style.background = appetizersImages[2]
+    items[3].style.background = appetizersImages[3]
   }
   function entrees() {
     why = document.getElementById("hi")
@@ -170,12 +177,18 @@ small {
     why.innerHTML += entreesDivs[0]
     why.innerHTML += entreesDivs[1]
     why.innerHTML += entreesDivs[2]
+    why.innerHTML += entreesDivs[3]
+    why.innerHTML += entreesDivs[4]
+    
     
     //alert("hello")
     items = document.getElementsByClassName("item")
     items[0].style.background = entreesImages[0]
     items[1].style.background = entreesImages[1]
     items[2].style.background = entreesImages[2]
+    items[3].style.background = entreesImages[3]
+    items[3].style.backgroundSize = '100% 100%'
+    items[4].style.background = entreesImages[4]
   }
   function desserts() {
     run = document.getElementById("hi")
@@ -193,9 +206,9 @@ small {
     
     
   }
-  function drinks() {
-    idk = document.getElementById("hi")
-    idk.innerHTML = ''
+	function drinks() {
+		idk = document.getElementById("hi")
+		idk.innerHTML = ''
     idk.innerHTML += drinksDivs[0]
     idk.innerHTML += drinksDivs[1]
     
@@ -213,4 +226,3 @@ small {
 	}
 </script>
 </body>
-
