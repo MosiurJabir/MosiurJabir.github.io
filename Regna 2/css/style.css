@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header #logo h1 a, #header #logo h1 a:hover {
-  color: #fff;
+  color: blue;
 }
 
 #header #logo img {
@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
-  color: #fff;
+  color: red;
 }
 
 @media (max-width: 768px) {
@@ -907,11 +907,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #contact .social-links a:hover {
   background: #2dc997;
-  color: #fff;
+  color: red;
 }
 
 #contact .form #sendmessage {
-  color: #2dc997;
+  color: purple;
   border: 1px solid #2dc997;
   display: none;
   text-align: center;
@@ -952,7 +952,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #2dc997;
   border: 0;
   padding: 10px 24px;
-  color: #fff;
+  color: green;
   transition: 0.4s;
 }
 
