@@ -118,7 +118,8 @@
 
           </div>
 
-          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
+          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight" onclick=bob(0)></div>
+					<div class="item"></div>
         </div>
 
       </div>
@@ -238,7 +239,8 @@
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="https://www.lennar.com/images/com/images/new-homes/18/1/2949/mhi/CoolSprings-EXT-DUSK_print.jpg?w=1200&h=650&as=1" alt=""></div>
+              <div class="pic"><img src="https://www.lennar.com/images/com/images/new-homes/18/1/2949/mhi/CoolSprings-EXT-DUSK_print.jpg?w=1200&h=650&as=1" onclick=bob(1) alt=""></div>
+							<div class="item"></div>
               <h4>Cheap</h4>
               <span>300k</span>
               <div class="social">
@@ -252,7 +254,8 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="https://hips.hearstapps.com/edc.h-cdn.co/assets/16/50/1024x683/ymca_1.jpg?resize=480:*" alt=""></div>
+              <div class="pic"><img src="https://hips.hearstapps.com/edc.h-cdn.co/assets/16/50/1024x683/ymca_1.jpg?resize=480:*" onclick=bob(2) alt=""></div>
+							<div class="item"></div>
               <h4>Middle</h4>
               <span>500k</span>
               <div class="social">
@@ -266,7 +269,8 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="http://evercoolhomes.com/wp-content/uploads/2015/09/cool-homes-designs-748x410.jpg" alt=""></div>
+              <div class="pic"><img src="http://evercoolhomes.com/wp-content/uploads/2015/09/cool-homes-designs-748x410.jpg" onclick=bob(3) alt=""></div>
+							<div class="item"></div>
               <h4>Hollywood</h4>
               <span>2M</span>
               <div class="social">
@@ -280,7 +284,8 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="https://i.kinja-img.com/gawker-media/image/upload/s--Tg_qqR3r--/c_scale,f_auto,fl_progressive,q_80,w_800/dnmtn4ksijwyep0xmljk.jpg" alt=""></div>
+              <div class="pic"><img src="https://i.kinja-img.com/gawker-media/image/upload/s--Tg_qqR3r--/c_scale,f_auto,fl_progressive,q_80,w_800/dnmtn4ksijwyep0xmljk.jpg" onclick=bob(4) alt=""></div>
+							<div class="item"></div>
               <h4>Mo!</h4>
               <span>CEO</span>
               <div class="social">
@@ -343,4 +348,29 @@
   <script src="js/main.js"></script>
 
 </body>
+<script>
+	joe = [
+	"Hello if your a little more curious about Our Houses heres some more. We were created on March 12th 1996 when Bob created a company when he earned his first billion.now hes here to sell cheap reality homes for the people who want nice and amazing homes cheap!!",
+	"If you would like a new brand new cheap reality homes you can get it here on our amazing website which has greate quality like our homes",
+	"We have all types of home with amazing backyards and more we have cheap,middle,and luxury homes and are all affordable to your liking so come buy ur reality home today!",
+		"The cheap home is very cheap for a reality home where u can get a amazing backyard in hollywood which is very rare to get!",
+		"The middle house is of course better then the cheap but not same as hollywood but it gives a glimpse of what hollywood feels like with a free maid on us and the perfect rooms for everybody our favorite homes are amazing by us!",
+	
+	]
+	
+	
+	items = document.getElementsByClassName("item")
+	
+	function bob(x){ 
+		if (items[x].innerHTML == "")
+			{ items[x].innerHTML = joe[x] }
+		else { items[x].innerHTML = ""}
+		
+		
+	}
+	
+	
+	
+	
+</script>
 </html>
