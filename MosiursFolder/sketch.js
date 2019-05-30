@@ -76,6 +76,7 @@ function draw() {
   fill(200,100,100);
   circle(x4,y4,50*s);
   circle(x5,y5,100*s);
+  if (touches.length == 0) {	  
   if(keyIsDown(LEFT_ARROW)) {
     x2 = x2 - 10
   }
@@ -87,6 +88,7 @@ function draw() {
   }
   if(keyIsDown(RIGHT_ARROW)) {
     x2 = x2 + 10
+  }
   }
   
   
