@@ -90,6 +90,11 @@ function draw() {
     x2 = x2 + 10
   }
   }
+  else {
+	  x2 = touches[0].x
+	  y2 = touches[0].y
+  }
+
   
   
   for (i=0; i<4; i=i+1) {
